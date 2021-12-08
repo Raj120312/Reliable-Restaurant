@@ -29,7 +29,7 @@ section:nth-child(1) {
 		url('bgimage.PNG')
 			no-repeat;
 	background-size: cover;
-
+        overflow-x:hidden;
 	background-position: center;
 	color: #fff;
 }
