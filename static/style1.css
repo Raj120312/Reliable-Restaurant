@@ -26,10 +26,11 @@ section a {
 section:nth-child(1) {
 	justify-content: flex-start;
 	background: linear-gradient(#0004, #0004),
-		url('bgimage.PNG')
+		url('bgimage.png')
 			no-repeat;
 	background-size: cover;
-        overflow-x:hidden;
+	overflow-x:hidden;
+
 	background-position: center;
 	color: #fff;
 }
@@ -126,7 +127,7 @@ header {
 	position: relative;
 	top: 0;
 	width: 105%;
-	padding: 30px 100px;
+	padding: 60px 80px 25px;
 	display: flex;
 	justify-content: space-between;
 
@@ -153,7 +154,7 @@ header .navigation a {
 	text-decoration: none;
 	font-weight: 500;
 	letter-spacing: 1px;
-	padding: 5px 8px;                  /* here i was able to droup the navigation links properly */
+	padding: 5px 8px;                  /* here i was able to group the navigation links properly */
 
 	border-radius: 20px;
 	transition: 0.3s;
@@ -170,23 +171,23 @@ header .navigation a:hover {
 
 .content {
 	max-width: 650px;
-	margin: 60px 100px;
+	margin: 60px 80px;           /* from 100 px to 80 px*/
 }
 
 .content .info h2 {
 	color: var(#fff);
-	font-size: 55px;
+	font-size: 30px;      /* here changesfrom 50 px to 30 px */
 	text-transform: uppercase;
 	font-weight: 800;
 	letter-spacing: 2px;
-	line-height: 60px;
+	line-height: 45px;    /* here chnages from 60 px to 45 px */
 	margin-bottom: 20px;
 }
 
 .content .info h2 span {
 	color: #fff;
 	font-size: 30px;
-	font-weight: 600;
+	font-weight: 800;  /* here changes from 600 to 800 */
 }
 
 .content .info p {
@@ -284,6 +285,7 @@ footer p {
 		bottom: 0;
 		left: 0;
 		right: 0;
+
 		background: rgba(120, 63, 79, 0.8);
 		display: flex;
 		flex-direction: column;
@@ -313,7 +315,7 @@ footer p {
 	}
 
 	header .logo {
-		position: absolute;
+		position: relative;
 		bottom: -6px;
 	}
 
@@ -322,13 +324,13 @@ footer p {
 	}
 
 	.content .info h2 {
-		font-size: 45px;
-		line-height: 50px;
+		font-size: 30px;
+		line-height: 45px;
 	}
 
 	.content .info h2 span {
-		font-size: 40px;
-		font-weight: 600;
+		font-size: 30px;
+		font-weight: 800px;
 	}
 
 	.content .info p {
@@ -367,13 +369,13 @@ footer p {
 
 @media (max-width: 560px) {
 	.content .info h2 {
-		font-size: 35px;
+		font-size: 30px;   /* from 35 to 30*/
 		line-height: 40px;
 	}
 
 	.content .info h2 span {
 		font-size: 30px;
-		font-weight: 600;
+		font-weight: 800; /* from 600 to 800*/
 	}
 
 	.content .info p {
