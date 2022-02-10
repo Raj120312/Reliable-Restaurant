@@ -10,7 +10,7 @@ import _pickle as cPickle
 app = Flask(__name__, template_folder="template")
 
 #loading decision tree model from models folder for predicting the success of the restaurant at a particular location
-predict_success_model=pickle.load(open("./models/decision_tree_model.pkl","rb"))
+predict_success_model=pickle.load(open("./models/decision_tree_model_hypp.pkl","rb"))
 print("predict_success_model_loaded")
 
 #loading the rating_prediction model from models folder for predicting the rating of the restaurant
