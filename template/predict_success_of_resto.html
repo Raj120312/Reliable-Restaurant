@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Predict the Success</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
@@ -13,18 +14,15 @@
 </head>
 
 <body>
-
-
-
-
 <style>
+
 body {
   background-image: url("./static/bg2.PNG");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center center;
   background-attachment: fixed;
-  overflow-x:hidden;
+
 
 
     }
@@ -41,30 +39,36 @@ body {
 
 
 
-
+<!--<h1>Predict The Success Of Zomato Restaurant</h1> -->
  <div class="login">
-	 <h1>Predict The Success Of Zomato Restaurant</h1>
+
+     <h1>Predict The Success Of Planned Restaurant</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="/predict_success_of_resto" method="post" >
-    	<input type="text" name="approx_cost_for_two_people" placeholder="Approximate Cost for Two people" required="required" />
-        <input type="text" name="number_of_cuisines_offered" placeholder="Number of Cuisines offered" required="required"/>
+   <center> <form action="/predict_success_of_resto" method="post" >
 
-		<input type="text" name="multiple_types" placeholder="Multiple Types offered" required="required" />
+       <input type="number" min="0" max="10000" name="approx_cost_for_two_people" title="Enter the Average of Approximate cost for two people" placeholder="Approximate Cost for Two people"  required="required" />
 
-          <select name="online_order" aria-label="online_order_facility" required="required">
+
+
+        <input type="number" min="0" max="10" name="number_of_cuisines_offered" title ="Enter the number of cuisines offered" placeholder="Number of Cuisines offered" required="required"/>
+
+
+		<input type="number" min = "0" max="10" name="multiple_types" title ="Enter the total number of types under which a restaurant has a speciality" placeholder="Multiple Types offered" required="required" />
+
+          <select name="online_order" title =" Is online order facility available" aria-label="online_order_facility" required="required">
           <option value="">Is Online Order Facility Available</option>
           <option value="1">Yes</option>
           <option value="0">No</option>
            </select>
 
-         <select name="book_table" aria-label="booking_table_facility" required="required">
+         <select name="book_table" title =" Is booking Table facility available"aria-label="booking_table_facility" required="required">
           <option value="">Is Booking Table Facility Available</option>
           <option value="1">Yes</option>
           <option value="0">No</option>
            </select>
 
-        <select name="location" aria-label="Location" required="required">
+        <select name="location" title="Enter the location"aria-label="Location" required="required">
 
 
             <option value="" >Location</option>
@@ -119,7 +123,7 @@ body {
            </select>
 
 
-        <select name = "restaurant_type" aria-label="Restaurant_Type" required="required">
+        <select name = "restaurant_type" title="Enter the type of restaurant" aria-label="Restaurant_Type" required="required">
           <option value="">Restaurant Type</option>
             <option value="0000000000">Bakery</option>
             <option value="1000000000">Bar</option>
@@ -138,7 +142,7 @@ body {
 
            </select>
 
-         <select  name = "listed_in_type" aria-label="Listed_in_type" required="required">
+         <select  name = "listed_in_type" title="Enter the type under which restaurant is or planned to be listed" aria-label="Listed_in_type" required="required">
           <option value="">Listed In (Type)</option>
           <option value="000000">Buffet</option>
           <option value="100000">Cafe</option>
@@ -150,7 +154,7 @@ body {
 
            </select>
 
-        <select name="listed_in_city" aria-label="Listed In City" required="required">
+        <select name="listed_in_city" title="Enter the city under which restaurant is or planned to be listed "aria-label="Listed In City" required="required">
           <option value="">Listed In City</option>
           <option value="00000000000000000000000000000">BTM</option>
           <option value="10000000000000000000000000000">Banashankari</option>
@@ -193,15 +197,16 @@ body {
 
 
 
+
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
 
 
    <br>
    <br>
    {{ success }}
-        </form>
+   </form></center>
 
- </div>
+     </div>
 
 
 
