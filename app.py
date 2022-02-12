@@ -4,8 +4,6 @@ import numpy as np
 import pickle
 import bz2
 import _pickle as cPickle
-
-
 # initializing the template folder for all the html files to look for
 app = Flask(__name__, template_folder="template")
 
@@ -37,7 +35,7 @@ def home():
 def success():
     if request.method =="POST":
         arr=[]
-        approx_cost_for_two_people = int(request.form['approx_cost_for_two_people'])
+        approx_cost_for_two_people = float(request.form['approx_cost_for_two_people'])
         arr.append(approx_cost_for_two_people)
 
         no_of_cuisines_offered = int(request.form['number_of_cuisines_offered'])
@@ -80,7 +78,7 @@ def success():
         prediction =predict_success_model.predict(fin)
         output=prediction
 
-        danger=" Your restaurant might be in danger ";
+        danger=" Your restaurant might be in danger. Try changing some features. ";
         succ="High Chances of Restaurant to be successful ";
 
         if output == 0:
