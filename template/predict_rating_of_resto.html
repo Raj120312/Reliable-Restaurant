@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Predict Rating Of Restaurant</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
@@ -19,12 +19,12 @@
 <style>
 body {
   background-image: url("./static/rating_pred.PNG");
-
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center center;
   background-attachment: fixed;
-  overflow-x:hidden;
+
+
 }
 ::placeholder {
   color: black;
@@ -41,24 +41,24 @@ body {
     <form action="/predict_rating_of_resto" method="post">
 
 
-            <input type="text" name = "votes" placeholder="total number of votes" required="required">
-            <input type="text" name="approx_cost_for_two_people" placeholder="Approximate Cost for Two people" required="required" />
-            <input type="text" name="number_of_cuisines_offered" placeholder="Number of Cuisines offered" required="required"/>
+            <input type="number" min ="0"name = "votes" title="Enter the total number of votes received by a restaurant" placeholder="total number of votes" required="required">
+            <input type="number" min="0" max="10000" name="approx_cost_for_two_people" title="Enter the approximate cost for two people" placeholder="Approximate Cost for Two people" required="required" />
+            <input type="number" min="0" max="10" name="number_of_cuisines_offered" title="Enter the total number of cuisines offered"placeholder="Number of Cuisines offered" required="required"/>
 
-    	<select name="online_order" aria-label="online_order_facility" required="required">
+    	<select name="online_order" title="Is online order acility available"aria-label="online_order_facility" required="required">
           <option value="">Is Online Order Facility Available</option>
           <option value="1">Yes</option>
           <option value="0">No</option>
            </select>
 
-        <select name="book_table" aria-label="booking_table_facility" required="required">
+        <select name="book_table" title="Is booking table facility availbale"aria-label="booking_table_facility" required="required">
           <option value="">Is Booking Table Facility Available</option>
           <option value="1">Yes</option>
           <option value="0">No</option>
            </select>
 
 
-        <select name="location" aria-label="Location" required="required">
+        <select name="location" title ="Enter the location of the restaurant" aria-label="Location" required="required">
 
 
             <option value="" >Location</option>
@@ -112,7 +112,7 @@ body {
 
         </select>
 
-            <select name = "restaurant_type" aria-label="Restaurant_Type" required="required">
+            <select name = "restaurant_type" title ="Enter the type of the resturant" aria-label="Restaurant_Type" required="required">
           <option value="">Restaurant Type</option>
             <option value="0000000000">Bakery</option>
             <option value="1000000000">Bar</option>
