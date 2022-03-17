@@ -7,7 +7,7 @@
 	font-family: "Poppins", sans-serif;
 	scroll-behavior: smooth;
 	scrollbar-width: thin;
-	--primary-color: #49111C;
+	--primary-color: #49111C;   /** a variable with name --primary-color created which is having this color and can be used further in the file using var()**/
 	--Middle-blue:#81D0E8;
 }
 
@@ -42,8 +42,8 @@ section:nth-child(1) .media-icons i {
 
 #about {
 	background-color: #eee;
-	min-height: 60vh;
-	padding: 7% 10%;
+	min-height:10vh;
+	padding: 7% 10%;  /* vertical | horizontal */
 }
 
 #info {
@@ -55,7 +55,7 @@ section:nth-child(1) .media-icons i {
 }
 
 #dashboard {
-	padding: 7% 10%;
+	padding: 7% 10%;/* vertical | horizontal */
 	background-color: #ddd;
 }
 
@@ -65,28 +65,28 @@ section:nth-child(1) .media-icons i {
 
 #dashboard p {
 	margin-bottom: 40px;
-	padding: 0 10%;
+	padding: 0 10%;/* vertical | horizontal */
 }
 
 #dashboard img {
 	max-height: 85vh;
 }
 
-#dashboard div {
+/**#dashboard div {
 	margin-top: 10px;
 	padding: 0 100px;
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+}**/
 
-#dashboard div img {
+/**#dashboard div img {
 	width: 100%;
 	max-height: 120px;
-}
+}**/
 
 .dashboard-image {
-	padding: 0 7%;
+	padding: 0 7%;/* vertical | horizontal */
 }
 
 #about > div,
@@ -99,10 +99,13 @@ section:nth-child(1) .media-icons i {
 
 #about > div img,
 #info > div img {
-	height: 70vh;
+	/**height: 70vh;**/
 	width: 70%;
 	object-fit: cover;
 	border-radius: 50%;
+	max-width: 75%;
+	height: 75vh;
+
 }
 
 #about h2,
@@ -113,14 +116,15 @@ section:nth-child(1) .media-icons i {
 	font-size: 50px;
 }
 
-#info > div > img {
+/**#info > div > img {
 	max-width: 75%;
 	height: 75vh;
-}
+}**/
 
 .about-content {
-	padding: 0 50px;
+	padding: 0 50px;/* vertical | horizontal */
 	margin-top: 50px;
+	    text-align: center;
 }
 
 header {
@@ -161,17 +165,17 @@ header .navigation a {
 	transition-property: background;
 }
 
-header .navigation a:not(:last-child) {
-	margin-right: 30px;
+header .navigation :not(:last-child) {
+	margin-right: 20px;
 }
 
-header .navigation a:hover {
+header .navigation :hover {
 	background: #333;
 }
 
 .content {
 	max-width: 650px;
-	margin: 60px 80px;           /* from 100 px to 80 px*/
+	margin: 60px 80px;           /* from 100 px to 80 px top and bottom */
 }
 
 .content .info h2 {
@@ -210,7 +214,7 @@ header .navigation a:hover {
 }
 
 .content .info-btn:hover {
-	background: #0c4f60;
+	background: #C4A484 ;
 }
 
 .media-icons {
@@ -236,10 +240,10 @@ header .navigation a:hover {
 	transform: scale(1.5);
 }
 
-#check {
+/**#check {
 	z-index: 3;
 	display: none;
-}
+}**/
 
 footer {
 	background-color: #ccc;
@@ -265,13 +269,16 @@ footer p {
 	label {
 		display: block;
 		font-size: 25px;
-		cursor: pointer;
-		transition: 0.3s;
-		transition-property: color;
+		cursor: pointer;  /* to change the cursor from arrow to chooser upon hovering*/
+		margin-right:5px;
+		/**transition: 0s;
+		transition-property: height;**/
 	}
 
 	label:hover {
 		color: #fff;
+
+
 	}
 
 	label .close-btn {
@@ -315,13 +322,14 @@ footer p {
 	}
 
 	header .logo {
-		position: absolute;
-		left:20px;
+	    display:block;
+		position:relative;
+		margin-left:-35px;
 		bottom: -6px;
 	}
 
 	.content {
-		margin: 10% 35px;
+		margin: 10% 35px;  /* top and bottom ,left and right*/
 	}
 
 	.content .info h2 {
@@ -339,7 +347,7 @@ footer p {
 	}
 
 	#about {
-		padding: 10% 35px;
+		padding: 10% 35px;/* vertical | horizontal */
 	}
 
 	#about p,
@@ -357,7 +365,7 @@ footer p {
 	}
 
 	#info div img {
-		height: auto;
+		height: auto;  /* the element will be placed in the best possible way */
 		width: auto;
 		max-height: 50vh;
 		max-width: 100%;
