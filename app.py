@@ -1,5 +1,4 @@
 from flask import Flask,render_template,request
-from flask_cors import cross_origin
 import numpy as np
 import pickle
 import bz2
@@ -25,7 +24,6 @@ print("predict_rating_model_loaded")
 
 #setting the route for main homepage
 @app.route("/",methods=['GET'])
-@cross_origin()
 def home():
     return render_template("index.html")
 
@@ -131,18 +129,10 @@ def rating():
 
 
         output = round(prediction[0], 1)
-        return render_template('predict_rating_of_resto.html', prediction_text='Your Rating is: {}'.format(output))
+        return render_template('predict_rating_of_resto.html', prediction_text='Restaurant Rating is: {}'.format(output))
 
 
     return render_template('predict_rating_of_resto.html')
-
-
-#routing to the dashboard.html page
-@app.route("/dashboard",methods=['GET'])
-@cross_origin()
-def dash():
-    return render_template("dashboard.html")
-
 
 if __name__=='__main__':
     app.run(debug=True,port=5008)
