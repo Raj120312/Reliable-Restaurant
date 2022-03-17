@@ -6,46 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Predict the Success</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
 <link rel="stylesheet" href="./static/style_success_prediction.css" type = 'text/css'>
 </head>
 
 <body>
-<style>
-
-body {
-  background-image: url("./static/bg2.PNG");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center center;
-  background-attachment: fixed;
 
 
-
-    }
-::placeholder {
-  color: black;
-  opacity: 1; /* Firefox */
-}
-
-
-</style>
-
-
-
-
-
-
-<!--<h1>Predict The Success Of Zomato Restaurant</h1> -->
- <div class="login">
+ <div class="form1">
 
      <h1>Predict The Success Of Planned Restaurant</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
-   <center> <form action="/predict_success_of_resto" method="post" >
+    <form action="/predict_success_of_resto" method="post" >
 
        <input type="number" min="0" max="10000" name="approx_cost_for_two_people" title="Enter the Average of Approximate cost for two people" placeholder="Approximate Cost for Two people"  required="required" />
 
@@ -202,9 +175,9 @@ body {
 
 
    <br>
-   <br>
+
    {{ success }}
-   </form></center>
+   </form>
 
      </div>
 
