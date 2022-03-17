@@ -4,44 +4,20 @@
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Predict Rating Of Restaurant</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="./static/style_rating_prediction.css" type = 'text/css'>
 
 </head>
 
 <body>
 
-
-
-<style>
-body {
-  background-image: url("./static/rating_pred.PNG");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center center;
-  background-attachment: fixed;
-
-
-}
-::placeholder {
-  color: black;
-  opacity: 1; /* Firefox */
-}
-</style>
-
-
-
- <div class="login">
+ <div class="form1">
 	<h1>Predict Zomato Restaurant Ratings</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="/predict_rating_of_resto" method="post">
 
 
-            <input type="number" min ="0"name = "votes" title="Enter the total number of votes received by a restaurant" placeholder="total number of votes" required="required">
+            <input type="number" min ="0" name = "votes" title="Enter the total number of votes received by a restaurant" placeholder="total number of votes" required="required">
             <input type="number" min="0" max="10000" name="approx_cost_for_two_people" title="Enter the approximate cost for two people" placeholder="Approximate Cost for Two people" required="required" />
             <input type="number" min="0" max="10" name="number_of_cuisines_offered" title="Enter the total number of cuisines offered"placeholder="Number of Cuisines offered" required="required"/>
 
@@ -134,7 +110,7 @@ body {
     </form>
 
    <br>
-   <br>
+
    {{ prediction_text }}
 
  </div>
