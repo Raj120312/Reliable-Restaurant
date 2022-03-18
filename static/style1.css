@@ -26,7 +26,7 @@ section a {
 section:nth-child(1) {
 	justify-content: flex-start;
 	background: linear-gradient(#0004, #0004),
-		url('bgimage.JPG')
+		url('bgimage.jpg')
 			no-repeat;
 	background-size: cover   ;
 	overflow-x:hidden;
