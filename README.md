@@ -4,7 +4,7 @@ A project on predicting the success and rating of the restaurant present at a pa
 
 This project is tested over lot of ml models like Decision Tree , Random Forest , Logistic Regression , Naive Bayes , K Nearest Neighbors(KNN), ExtraTree Regressor , Linear Regression etc .
 
-For predicting the success of the restaurant at a particular location , Decision Tree worked best as it gave 83.01% accuracy which was highest among Random Forest , KNN , Logistic Regression, Naive Bayes
+For predicting the success of the restaurant at a particular location , Decision Tree worked best as it gave 85.01% accuracy which was highest among Random Forest , KNN , Logistic Regression, Naive Bayes
 
 For predicting the rating of the restaurant , ExtraTree Regressor performed best giving the R2 score of 93.45% among Linear Regression and Random Forest.
 
