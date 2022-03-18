@@ -26,7 +26,7 @@ section a {
 section:nth-child(1) {
 	justify-content: flex-start;
 	background: linear-gradient(#0004, #0004),
-		url('bgimage.PNG')
+		url('bgimage.JPG')
 			no-repeat;
 	background-size: cover   ;
 	overflow-x:hidden;
@@ -240,10 +240,10 @@ header .navigation :hover {
 	transform: scale(1.5);
 }
 
-/**#check {
+#check {
 	z-index: 3;
 	display: none;
-}**/
+}
 
 footer {
 	background-color: #ccc;
