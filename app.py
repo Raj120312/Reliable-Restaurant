@@ -135,4 +135,4 @@ def rating():
     return render_template('predict_rating_of_resto.html')
 
 if __name__=='__main__':
-    app.run(debug=True,port=5008)
+    app.run(debug=True)
