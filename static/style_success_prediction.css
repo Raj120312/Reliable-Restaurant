@@ -10,7 +10,9 @@
 
 html { width: 100%; height:100%;  overflow-x:hidden;}
 body {
-  background-image: url("bg2.PNG");
+ 	background: #fc9c9c;
+
+  background-image: url("bg2.JPG");
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   	color: #fff;
@@ -29,7 +31,7 @@ body {
   opacity: 1; /* Firefox */
 }
 
-.form1 {
+.form1{
 	margin-left:auto;
     margin-right:auto;
     width:40%;
@@ -54,3 +56,13 @@ input,select,option{
 	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
 
 }
+
+@media screen and (max-width: 600px){
+.form1{
+width: 100%;
+
+}
+body,html{
+overflow-x:hidden;
+}
+
